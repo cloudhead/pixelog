@@ -1,4 +1,11 @@
-pixelog is a simple way to track visits to a web page.
+pixelog is a simple way to track visits to a web page,
+which doesn't require javascript.
+
+RATIONALE
+
+  When you need something simple to track static HTML
+  page visits and don't want to pollute your site with
+  javascript.
 
 USAGE
 

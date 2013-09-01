@@ -1,2 +1,25 @@
-pixelog is a very simple way to track visits to a web page.
+pixelog is a simple way to track visits to a web page.
 
+USAGE
+
+  On the page we want to track, we include an <img> tag
+  pointing to the tracking pixel on the pixelog server:
+
+    <img src="http://pixelog.local/t.gif">
+
+  If we want to include additional information, we simply
+  add it to the url query string:
+
+    <img src="http://pixelog.local/t.gif?page=home">
+
+  We then start the pixelog server on pixelog.local:
+
+    $ pixelog -l :80 -file "t.gif"
+
+  When our page is loaded, pixelog outputs a log entry:
+
+    2013/09/01 15:38:40 184.96.4.32 /t.gif?page=home "Mozilla/5.0" -
+
+COPYRIGHT
+
+  (C) 2013 Alexis Sellier <alexis@cloudhead.io>

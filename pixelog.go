@@ -11,16 +11,16 @@ import (
 
 func main() {
 	l := flag.String("l", ":8080", "listen addr")
-	path := flag.String("path", "t.gif", "tracking pixel filename")
+	file := flag.String("file", "t.gif", "tracking pixel filename")
 
 	flag.Parse()
 
-	pixel, err := ioutil.ReadFile(*path)
+	pixel, err := ioutil.ReadFile(*file)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	http.HandleFunc("/"+*path, handlePixel(pixel))
+	http.HandleFunc("/"+*file, handlePixel(pixel))
 	http.ListenAndServe(*l, nil)
 }
 

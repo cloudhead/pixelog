@@ -18,7 +18,10 @@ USAGE
 
   When our page is loaded, pixelog outputs a log entry:
 
-    2013/09/01 15:38:40 184.96.4.32 /t.gif?page=home "Mozilla/5.0" -
+    2013/09/01 15:38:40 184.96.4.32 /t.gif?page=home "Mozilla/5.0" http://ref.co
+
+  The fields in order of appearance: date, time, remote ip, request url, user-agent,
+  referer.
 
 COPYRIGHT
 
